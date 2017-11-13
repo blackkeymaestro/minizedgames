@@ -13,16 +13,17 @@ A. Prepare USB Stick with the following conditions
 
   /
   prepare_emmc.sh 
-  --/boot (in tar ball)
-     -- image.ub
-     -- wpa_supplicant.conf
+    /boot (in tar ball)
+      image.ub
+      wpa_supplicant.conf
 
-  --/ext4 (in tar ball)
-     -- /lib
-        -- (ext4 libs)
-     -- mkfs.ext4
-  --/rootfs (Download https://rcn-ee.com/rootfs/eewiki/minfs/ubuntu-16.04.3-minimal-armhf-2017-10-10.tar.xz) 
-     -- armhf-rootfs-ubuntu-xenial.tar (extract from ubuntu-16.04.3-minimal-armhf-2017-10-10.tar.xz)
+    /ext4 (in tar ball)
+      /lib
+        (ext4 libs)
+      mkfs.ext4
+  
+    /rootfs (Download https://rcn-ee.com/rootfs/eewiki/minfs/ubuntu-16.04.3-minimal-armhf-2017-10-10.tar.xz) 
+      armhf-rootfs-ubuntu-xenial.tar (extract from ubuntu-16.04.3-minimal-armhf-2017-10-10.tar.xz)
 
 B)Boot Minized with built-in image, mount the usb to /mnt/usb/boot/image and run this script
   mount /dev/sda1 /mnt/usb
