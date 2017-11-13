@@ -7,4 +7,3 @@ Wifi:
 4) Run sudo /usr/local/bin/wifi.sh
 5) Run ifconfig to check that wlan0 interface is up.  Use "ping" command to ping a server or website to 
 confirm connectivity
-
