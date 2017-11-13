@@ -9,15 +9,15 @@ there are two partitions: boot (DOS) and root (EXT4)
 
 A. Prepare USB Stick with the following conditions
   1. USB fully formatted for EXT4.  
-  2. USB files in the following directory structure
+  2. Extract prepare_emmc.tar.gz such that files are in the following directory structure
 
     /
     prepare_emmc.sh 
-      /boot (in tar ball)
+      /boot 
         image.ub
         wpa_supplicant.conf
 
-      /ext4 (in tar ball)
+      /ext4 
         /lib
           (ext4 libs)
         mkfs.ext4
