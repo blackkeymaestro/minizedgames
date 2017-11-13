@@ -1,8 +1,11 @@
+By: Eddie Vergara
+eavergara@gmail.com
+
 Instructions for Installing Ubuntu Filesystem on Minized eMMC 
 
 The Minized ships with a single FAT32 partition in the eMMC.  In order
-to install the Ubuntu filesystem, we need to format the eMMC into two
-partitions: boot (DOS) and root (EXT4)
+to install the Ubuntu filesystem, we need to format the eMMC such that 
+there are two partitions: boot (DOS) and root (EXT4)
 
 A. Prepare USB Stick with the following conditions
   1. USB fully formatted for EXT4.  
@@ -24,3 +27,12 @@ A. Prepare USB Stick with the following conditions
 B)Boot Minized with built-in image, mount the usb to /mnt/usb/boot/image and run this script
   mount /dev/sda1 /mnt/usb
   /mnt/usb/prepare_emmc.sh
+  
+prepare_emmc script accomplishes the following
+1) Partitions eMMC into one 128M boot partition, and ext4 partition with the rest of the device
+2) Formats boot as DOS boot partition; Formats root as EXT4 partition 
+3) Copies Linux kernel and wpa_supplicant onto boot partition
+4) Uncompresses Ubuntu filesystem onto root partition
+5) Sets root permissions to the filesystem
+
+
